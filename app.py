@@ -301,11 +301,21 @@ if counts_2023 is not None and not counts_2023.empty:
 		line_df = line_df.sort_values("month")
 		
 		fig = px.line(line_df, x="month", y="count", color="year", markers=True, 
-		             title="Monthly Violations Comparison: 2022 vs 2023")
+		             title="Monthly Violations Comparison: 2022 vs 2023",
+		             color_discrete_map={"2022": "#FF6B6B", "2023": "#4ECDC4"})
 		fig.update_layout(
 			xaxis_title="Month", 
 			yaxis_title="Number of Violations",
-			colorway=["#FF6B6B", "#4ECDC4"]  # Red for 2022, Teal for 2023
+			font=dict(color="#ffffff"),  # White text for dark theme
+			plot_bgcolor="rgba(0,0,0,0)",  # Transparent plot background
+			paper_bgcolor="rgba(0,0,0,0)",  # Transparent overall background
+			legend=dict(
+				bgcolor="rgba(27,31,42,0.9)",  # Dark background matching sidebar
+				bordercolor="rgba(255,255,255,0.2)",  # Subtle border
+				font=dict(color="#ffffff")  # White text in legend
+			),
+			xaxis=dict(color="#ffffff"),  # White axis text
+			yaxis=dict(color="#ffffff")   # White axis text
 		)
 		st.plotly_chart(fig, use_container_width=True)
 	else:
@@ -326,7 +336,20 @@ if violation_col is not None and pd.notna(violation_col).any() and month_col and
 	top5 = tickets["violation"].value_counts().head(5).index.tolist()
 	t5 = tickets[tickets["violation"].isin(top5)]
 	monthly = t5.groupby([month_col, "violation"]).size().reset_index(name="count").rename(columns={month_col:"x"})
-	fig2 = px.line(monthly, x="x", y="count", color="violation", markers=True)
+	fig2 = px.line(monthly, x="x", y="count", color="violation", markers=True,
+	              title="Top 5 Violation Types: Seasonal Trends")
+	fig2.update_layout(
+		font=dict(color="#ffffff"),
+		plot_bgcolor="rgba(0,0,0,0)",
+		paper_bgcolor="rgba(0,0,0,0)",
+		legend=dict(
+			bgcolor="rgba(27,31,42,0.9)",
+			bordercolor="rgba(255,255,255,0.2)",
+			font=dict(color="#ffffff")
+		),
+		xaxis=dict(color="#ffffff"),
+		yaxis=dict(color="#ffffff")
+	)
 	st.plotly_chart(fig2, use_container_width=True)
 else:
 	st.info("Need mapped violation and a month field for this visual.")
@@ -335,7 +358,15 @@ else:
 st.subheader("Weather Condition vs Violations")
 if pd.notna(tickets.get("weather_condition")).any():
 	wx_counts = tickets.groupby("weather_condition").size().reset_index(name="count").sort_values("count", ascending=False)
-	fig3 = px.bar(wx_counts, x="weather_condition", y="count")
+	fig3 = px.bar(wx_counts, x="weather_condition", y="count",
+	             title="Weather Conditions vs Number of Violations")
+	fig3.update_layout(
+		font=dict(color="#ffffff"),
+		plot_bgcolor="rgba(0,0,0,0)",
+		paper_bgcolor="rgba(0,0,0,0)",
+		xaxis=dict(color="#ffffff"),
+		yaxis=dict(color="#ffffff")
+	)
 	st.plotly_chart(fig3, use_container_width=True)
 else:
 	st.info("Weather data not available or not mapped.")
@@ -349,8 +380,18 @@ if weekday_col is not None and pd.notna(weekday_col).any():
 	wd["weekday"] = pd.Categorical(wd["weekday"], categories=weekday_order, ordered=True)
 	wd = wd.sort_values("weekday")
 	avg_count = wd["count"].mean() if not wd.empty else 0
-	fig4 = px.bar(wd, x="weekday", y="count")
-	fig4.add_hline(y=avg_count, line_dash="dash", line_color="orange", annotation_text=f"Avg {avg_count:.0f}")
+	fig4 = px.bar(wd, x="weekday", y="count",
+	             title="Violations by Day of Week (vs Average)")
+	fig4.add_hline(y=avg_count, line_dash="dash", line_color="#FFA500", 
+	              annotation_text=f"Average: {avg_count:.0f}",
+	              annotation=dict(font=dict(color="#ffffff")))
+	fig4.update_layout(
+		font=dict(color="#ffffff"),
+		plot_bgcolor="rgba(0,0,0,0)",
+		paper_bgcolor="rgba(0,0,0,0)",
+		xaxis=dict(color="#ffffff"),
+		yaxis=dict(color="#ffffff")
+	)
 	st.plotly_chart(fig4, use_container_width=True)
 else:
 	st.info("Map a valid weekday field to compute weekday counts.")
@@ -360,7 +401,15 @@ st.subheader("Heatmap: Age Group vs Violation Type")
 if pd.notna(tickets.get("age_group")).any() and pd.notna(tickets.get("violation")).any():
 	hm = tickets.groupby(["age_group", "violation"]).size().reset_index(name="count")
 	pivot = hm.pivot(index="age_group", columns="violation", values="count").fillna(0)
-	fig5 = px.imshow(pivot, aspect="auto", color_continuous_scale="Viridis")
+	fig5 = px.imshow(pivot, aspect="auto", color_continuous_scale="Plasma",
+	                title="Heatmap: Age Group vs Violation Type Patterns")
+	fig5.update_layout(
+		font=dict(color="#ffffff"),
+		plot_bgcolor="rgba(0,0,0,0)",
+		paper_bgcolor="rgba(0,0,0,0)",
+		xaxis=dict(color="#ffffff"),
+		yaxis=dict(color="#ffffff")
+	)
 	st.plotly_chart(fig5, use_container_width=True)
 else:
 	st.info("Need age and violation mappings for heatmap.")
@@ -369,8 +418,22 @@ else:
 st.subheader("Stacked Bar: Violations by Age Group and Gender")
 if pd.notna(tickets.get("age_group")).any() and pd.notna(tickets.get("gender")).any():
 	ag = tickets.groupby(["age_group", "gender"]).size().reset_index(name="count")
-	fig6 = px.bar(ag, x="age_group", y="count", color="gender", barmode="stack")
-	fig6.update_layout(xaxis_title="Age Group", yaxis_title="Violations")
+	fig6 = px.bar(ag, x="age_group", y="count", color="gender", barmode="stack",
+	             title="Violations by Age Group (Stacked by Gender)")
+	fig6.update_layout(
+		xaxis_title="Age Group", 
+		yaxis_title="Violations",
+		font=dict(color="#ffffff"),
+		plot_bgcolor="rgba(0,0,0,0)",
+		paper_bgcolor="rgba(0,0,0,0)",
+		legend=dict(
+			bgcolor="rgba(27,31,42,0.9)",
+			bordercolor="rgba(255,255,255,0.2)",
+			font=dict(color="#ffffff")
+		),
+		xaxis=dict(color="#ffffff"),
+		yaxis=dict(color="#ffffff")
+	)
 	st.plotly_chart(fig6, use_container_width=True)
 	with st.expander("Insight & Action"):
 		st.write("If the highest bar appears at 26-35, prioritize targeted, gender-aware training for this group.")
