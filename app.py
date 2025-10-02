@@ -22,9 +22,22 @@ def read_csv_if_exists(path: str):
 
 @st.cache_data(show_spinner=False)
 def load_data():
+	# Try to load full datasets first
 	df_2023 = read_csv_if_exists("Traffic_Tickets_Issued_Window_2023.csv")
 	df_2022 = read_csv_if_exists("Traffic_Tickets_Issued_Window_2022.csv")
 	weather = read_csv_if_exists("cleaned_weather_dataset.csv")
+	
+	# If full dataset not available, fall back to sample data
+	if df_2023 is None:
+		df_2023 = read_csv_if_exists("sample_traffic_tickets_2023.csv")
+		if df_2023 is not None:
+			st.info("🚀 **Demo Mode**: Using sample dataset for demonstration. Upload full datasets for complete analysis.")
+	
+	if weather is None:
+		weather = read_csv_if_exists("sample_weather_dataset.csv")
+		if weather is not None:
+			st.info("🌤️ **Demo Mode**: Using sample weather data.")
+	
 	return df_2022, df_2023, weather
 
 

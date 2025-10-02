@@ -1,5 +1,11 @@
 # Data files (too large for Git)
-*.csv
+Traffic_Tickets_Issued_Window_*.csv
+cleaned_weather_dataset.csv
+
+# Sample data (include these for demo)
+# sample_traffic_tickets_*.csv
+# sample_weather_dataset.csv
+
 *.xlsx
 *.xls
 *.json

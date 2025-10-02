@@ -1,15 +1,69 @@
-### FleetSafe Traffic Violations Analytics
+# FleetSafe Traffic Violations Analytics
 
 **Goal**: Reduce road traffic violations and improve road safety through targeted training and awareness campaigns using data-driven insights.
+
+## 📊 Data Access & Deployment
+
+### Demo Data Included
+The repository includes sample datasets for testing and demonstration:
+- `sample_traffic_tickets_2023.csv`: 500 sample records
+- `sample_weather_dataset.csv`: 50 sample weather records
+
+### Production Data
+Full datasets are **not included** in this repository due to size constraints (~280MB files).
+- `Traffic_Tickets_Issued_Window_2023.csv`: Full 2023 dataset
+- `cleaned_weather_dataset.csv`: Full weather dataset
+
+### Deployment Options
+
+#### **Option 1: Streamlit Cloud (Free Hosting)**
+1. **Fork this repository**
+2. **Upload your data files** to your fork:
+   - Add `Traffic_Tickets_Issued_Window_2023.csv` to repository root
+   - Add `cleaned_weather_dataset.csv` to repository root
+3. **Deploy on Streamlit Cloud**:
+   - Go to [share.streamlit.io](https://share.streamlit.io)
+   - Connect your GitHub repo
+   - Select `app.py` as main file
+
+#### **Option 2: Cloud Storage Integration (Recommended)**
+For privacy or when datasets are too large:
+
+```python
+# Example: Load from AWS S3
+import streamlit as st
+import pandas as pd
+import boto3
+
+def load_data_from_s3():
+    s3 = boto3.client('s3')
+    obj = s3.get_object(Bucket='your-bucket', Key='data/Traffic_Tickets_2023.csv')
+    return pd.read_csv(obj['Body'])
+
+# In app.py, replace the local file loading with:
+# df_2023 = load_data_from_s3() if st.secrets.get("aws_enabled") else pd.read_csv("local_file.csv")
+```
+
+#### **Option 3: Dataset Links**
+```python
+# Example: Load from public URLs
+DATA_URLS = {
+    "traffic_2023": "https://your-storage.com/traffic_tickets_2023.csv",
+    "weather": "https://your-storage.com/weather_data.csv"
+}
+
+def load_from_url(url):
+    return pd.read_csv(url)
+```
 
 ### Project Structure
 - `app.py`: Streamlit dashboard with the requested visuals
 - `notebooks/eda.ipynb`: Exploratory data analysis notebook
-- `Traffic_Tickets_Issued_Window_2023.csv`: Tickets dataset (provided)
-- `cleaned_weather_dataset.csv`: Weather dataset (optional; merged by date/time if present)
-- `intro.txt`: Project intro copy (optional)
+- `sample_traffic_tickets_2023.csv`: **Sample data for demos** (included in repo)
+- `sample_weather_dataset.csv`: **Sample weather data for demos** (included in repo)
+- `create_sample_data.py`: Script to generate sample datasets
 - `.streamlit/config.toml`: Dark theme config
-- `BLOG.md`: Project write-up
+- `FleetSafe_Blog_Post.md`: Comprehensive project documentation
 
 ### Setup
 1. Create a virtual environment (optional but recommended).
