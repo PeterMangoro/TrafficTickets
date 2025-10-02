@@ -232,44 +232,86 @@ with st.expander("Data preview", expanded=False):
 
 # -------------------- Visual 1: 2022 vs 2023 line --------------------
 st.subheader("Violations: 2022 vs 2023")
-# Build monthly counts for 2023 using either datetime month or month_label
-counts_2023 = None
-if "month" in tickets.columns and pd.notna(tickets["month"]).any():
-	counts_2023 = tickets.groupby("month").size().reset_index(name="count")
-	counts_2023.rename(columns={"month": "x"}, inplace=True)
-elif "month_label" in tickets.columns and pd.notna(tickets["month_label"]).any():
-	counts_2023 = tickets.groupby("month_label").size().reset_index(name="count").sort_values("month_label")
-	counts_2023.rename(columns={"month_label": "x"}, inplace=True)
 
+def normalize_to_month_names(df: pd.DataFrame, mapping: dict) -> pd.DataFrame:
+	"""Convert various month formats to consistent month names"""
+	month_labels = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+	
+	# Try different month column formats
+	month_data = None
+	
+	# Try datetime column first
+	if mapping.get("datetime") and mapping["datetime"] in df.columns:
+		try:
+			datetime_col = coerce_datetime(df[mapping["datetime"]])
+			month_data = pd.to_datetime(datetime_col).dt.month.apply(lambda x: month_labels[x-1] if pd.notna(x) else np.nan)
+		except Exception:
+			pass
+	
+	# Try Violation Month column
+	if month_data is None and "Violation Month" in df.columns:
+		def _to_mon_name(x):
+			s = str(x).strip().lower()
+			month_map = {
+				"jan":0,"january":0,"1":0,
+				"feb":1,"february":1,"2":1,
+				"mar":2,"march":2,"3":2,
+				"apr":3,"april":3,"4":3,
+				"may":4,"5":4,
+				"jun":5,"june":5,"6":5,
+				"jul":6,"july":6,"7":6,
+				"aug":7,"august":7,"8":7,
+				"sep":8,"september":8,"9":8,
+				"oct":9,"october":9,"10":9,
+				"nov":10,"november":10,"11":10,
+				"dec":11,"december":11,"12":11
+			}
+			try:
+				return month_labels[month_map[s]] if s in month_map else None
+			except Exception:
+				return None
+		
+		month_data = df["Violation Month"].apply(_to_mon_name)
+	
+	return month_data
+
+# Process 2023 data
+counts_2023 = None
+if pd.notna(tickets.get("violation", pd.Series([pd.NA]))).any():
+	month_names_2023 = normalize_to_month_names(tickets, mapping)
+	if month_names_2023 is not None:
+		counts_2023 = pd.DataFrame({"month": month_names_2023}).groupby("month").size().reset_index(name="count")
+		counts_2023["year"] = "2023"
+
+# Process 2022 data
+counts_2022 = pd.DataFrame(columns=["month", "count", "year"])
+if df_2022 is not None and not df_2022.empty:
+	month_names_2022 = normalize_to_month_names(df_2022, mapping)
+	if month_names_2022 is not None:
+		counts_2022 = pd.DataFrame({"month": month_names_2022}).groupby("month").size().reset_index(name="count")
+		counts_2022["year"] = "2022"
+
+# Combine and plot
 if counts_2023 is not None and not counts_2023.empty:
-	counts_2023["year"] = "2023"
-	counts_2022 = pd.DataFrame(columns=["x", "count", "year"])
-	if df_2022 is not None and not df_2022.empty:
-		mapped_2022 = map_required_columns(df_2022, mapping)
-		if col_datetime and col_datetime in df_2022.columns:
-			mapped_2022["datetime"] = coerce_datetime(mapped_2022[col_datetime]) if col_datetime != "datetime" else coerce_datetime(mapped_2022["datetime"]) 
-			mapped_2022["month"] = to_month_period(mapped_2022["datetime"]) 
-			counts_2022 = mapped_2022.groupby("month").size().reset_index(name="count").rename(columns={"month": "x"})
-			counts_2022["year"] = "2022"
-		elif "Violation Month" in df_2022.columns:
-			cm = df_2022.groupby("Violation Month").size().reset_index(name="count")
-			# normalize ordering similarly to 2023
-			month_labels = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
-			def _to_mon_num2(x):
-				s = str(x).strip().lower()
-				m = {"jan":1,"january":1,"feb":2,"february":2,"mar":3,"march":3,"apr":4,"april":4,"may":5,"jun":6,"june":6,"jul":7,"july":7,"aug":8,"august":8,"sep":9,"september":9,"oct":10,"october":10,"nov":11,"november":11,"dec":12,"december":12}.get(s)
-				return m if m else (int(x) if str(x).isdigit() else np.nan)
-			cm["_n"] = cm["Violation Month"].apply(_to_mon_num2)
-			cm = cm.sort_values("_n")
-			cm["x"] = cm["_n"].map(lambda n: month_labels[int(n)-1] if pd.notna(n) else np.nan)
-			counts_2022 = cm[["x","count"]].copy()
-			counts_2022["year"] = "2022"
 	line_df = pd.concat([counts_2022, counts_2023], ignore_index=True)
-	fig = px.line(line_df, x="x", y="count", color="year", markers=True)
-	fig.update_layout(xaxis_title="Month", yaxis_title="Violations")
-	st.plotly_chart(fig, use_container_width=True)
+	if not line_df.empty:
+		# Ensure proper month ordering
+		month_order = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+		line_df["month"] = pd.Categorical(line_df["month"], categories=month_order, ordered=True)
+		line_df = line_df.sort_values("month")
+		
+		fig = px.line(line_df, x="month", y="count", color="year", markers=True, 
+		             title="Monthly Violations Comparison: 2022 vs 2023")
+		fig.update_layout(
+			xaxis_title="Month", 
+			yaxis_title="Number of Violations",
+			colorway=["#FF6B6B", "#4ECDC4"]  # Red for 2022, Teal for 2023
+		)
+		st.plotly_chart(fig, use_container_width=True)
+	else:
+		st.info("No time series data available.")
 else:
-	st.info("Map a valid datetime or month column to enable time series.")
+	st.info("Map violation and date/month columns to enable comparison.")
 
 # -------------------- Visual 2: Top 5 violation types by month --------------------
 st.subheader("Top 5 Violations by Month (Seasonality)")
