@@ -1,0 +1,301 @@
+Date,Violation Year,Violation Month,Violation Day of Week,Age at Violation,Gender,Violation Description,Violation Charged Code
+2022-08-10,2022,6,1,36,Male,Unsafe lane change,TC9971
+2022-01-14,2022,10,4,27,Male,Stop sign violation,TC6670
+2022-05-29,2022,10,6,32,Female,Unsafe lane change,TC2848
+2022-07-31,2022,5,1,21,Female,Seat belt violation,TC9176
+2022-10-28,2022,8,4,18,Male,Unsafe lane change,TC6961
+2022-10-21,2022,9,6,28,Female,Equipment violation,TC7320
+2022-04-12,2022,4,1,55,Male,Speeding - 1-10 mph over limit,TC3368
+2022-01-31,2022,10,5,26,Male,Following too closely,TC8795
+2022-09-12,2022,8,7,42,Female,Seat belt violation,TC6723
+2022-05-31,2022,3,7,22,Female,Seat belt violation,TC6065
+2022-08-08,2022,9,3,40,Male,Speeding - 11-20 mph over limit,TC2889
+2022-02-18,2022,4,2,58,Male,Equipment violation,TC3513
+2022-06-22,2022,10,2,33,Male,Speeding - 1-10 mph over limit,TC4531
+2022-09-08,2022,1,4,21,Female,Following too closely,TC5359
+2022-05-17,2022,3,7,44,Female,Equipment violation,TC1747
+2022-12-04,2022,2,2,61,Female,Speeding - 1-10 mph over limit,TC3576
+2022-06-08,2022,6,5,59,Female,Stop sign violation,TC8123
+2022-09-01,2022,5,2,31,Female,Stop sign violation,TC7604
+2022-07-27,2022,4,2,50,Male,Speeding - 1-10 mph over limit,TC7386
+2022-10-28,2022,2,7,40,Male,Stop sign violation,TC1147
+2022-06-14,2022,11,6,48,Female,Following too closely,TC8138
+2022-04-25,2022,2,5,42,Male,Seat belt violation,TC7652
+2022-01-14,2022,8,2,55,Male,Seat belt violation,TC1304
+2022-10-06,2022,4,6,18,Male,Unsafe lane change,TC2393
+2022-05-24,2022,11,6,57,Male,Speeding - 11-20 mph over limit,TC2317
+2022-06-04,2022,5,6,30,Male,Speeding - 11-20 mph over limit,TC2889
+2022-08-30,2022,11,7,55,Female,Following too closely,TC4011
+2022-02-17,2022,5,3,20,Female,Seat belt violation,TC7212
+2022-07-15,2022,6,1,60,Female,Stop sign violation,TC4981
+2022-04-26,2022,9,4,54,Male,Unsafe lane change,TC1002
+2022-03-16,2022,7,6,24,Male,Mobile phone violation,TC7119
+2022-11-21,2022,7,5,46,Male,Following too closely,TC4716
+2022-12-17,2022,8,1,63,Female,Stop sign violation,TC9373
+2022-02-25,2022,8,2,40,Male,Speeding - 11-20 mph over limit,TC7003
+2022-06-25,2022,9,1,22,Female,Seat belt violation,TC1967
+2022-06-09,2022,5,6,27,Female,Equipment violation,TC7805
+2022-10-13,2022,10,7,62,Male,Speeding - 11-20 mph over limit,TC9156
+2022-04-15,2022,6,6,37,Male,Equipment violation,TC5168
+2022-01-18,2022,8,5,29,Male,Speeding - 1-10 mph over limit,TC7825
+2022-08-02,2022,11,7,59,Male,Red light violation,TC2276
+2022-10-02,2022,3,5,26,Female,Stop sign violation,TC1369
+2022-05-24,2022,4,1,50,Female,Following too closely,TC2761
+2022-11-05,2022,6,1,54,Male,Following too closely,TC4194
+2022-03-31,2022,10,3,35,Female,Unsafe lane change,TC3951
+2022-05-28,2022,8,7,24,Female,Mobile phone violation,TC9194
+2022-10-03,2022,2,4,44,Male,Unsafe lane change,TC6968
+2022-05-29,2022,8,5,18,Male,Stop sign violation,TC4352
+2022-09-20,2022,9,7,35,Female,Speeding - 1-10 mph over limit,TC5496
+2022-06-13,2022,11,5,45,Female,Seat belt violation,TC3102
+2022-08-02,2022,7,4,61,Female,Equipment violation,TC1093
+2022-02-12,2022,11,1,53,Female,Red light violation,TC9917
+2022-02-24,2022,5,6,47,Female,Speeding - 11-20 mph over limit,TC5677
+2022-08-16,2022,3,3,50,Female,Speeding - 1-10 mph over limit,TC1628
+2022-02-25,2022,10,5,54,Male,Unsafe lane change,TC4719
+2022-11-10,2022,12,5,59,Female,Following too closely,TC5731
+2022-12-06,2022,9,4,50,Female,Speeding - 11-20 mph over limit,TC9832
+2022-05-13,2022,7,3,38,Male,Speeding - 1-10 mph over limit,TC4683
+2022-02-24,2022,8,5,19,Male,Seat belt violation,TC2672
+2022-08-10,2022,8,2,46,Female,Following too closely,TC1149
+2022-01-29,2022,2,6,20,Female,Mobile phone violation,TC4795
+2022-05-09,2022,1,4,49,Female,Speeding - 11-20 mph over limit,TC5301
+2022-03-06,2022,11,7,29,Male,Stop sign violation,TC1412
+2022-12-24,2022,4,2,19,Female,Mobile phone violation,TC6069
+2022-02-17,2022,8,5,19,Female,Speeding - 1-10 mph over limit,TC9604
+2022-08-30,2022,10,5,34,Female,Mobile phone violation,TC1657
+2022-02-14,2022,5,2,64,Female,Unsafe lane change,TC2737
+2022-01-02,2022,11,3,22,Male,Speeding - 1-10 mph over limit,TC3817
+2022-08-09,2022,7,1,63,Female,Speeding - 1-10 mph over limit,TC8368
+2022-01-08,2022,10,2,21,Male,Seat belt violation,TC7820
+2022-08-31,2022,4,7,65,Male,Speeding - 1-10 mph over limit,TC1802
+2022-08-18,2022,11,6,43,Female,Seat belt violation,TC3098
+2022-06-24,2022,10,2,19,Male,Speeding - 1-10 mph over limit,TC1276
+2022-07-28,2022,3,1,50,Male,Mobile phone violation,TC2493
+2022-09-06,2022,8,7,62,Female,Mobile phone violation,TC3153
+2022-02-03,2022,1,4,37,Female,Unsafe lane change,TC4229
+2022-05-05,2022,1,1,22,Female,Following too closely,TC2236
+2022-08-08,2022,5,4,35,Female,Unsafe lane change,TC2958
+2022-06-29,2022,12,5,20,Male,Unsafe lane change,TC6272
+2022-11-07,2022,7,2,34,Female,Red light violation,TC9799
+2022-03-10,2022,10,2,28,Female,Stop sign violation,TC9513
+2022-09-19,2022,12,6,24,Female,Mobile phone violation,TC9535
+2022-07-31,2022,5,1,52,Female,Equipment violation,TC8510
+2022-11-03,2022,5,2,57,Female,Following too closely,TC5278
+2022-03-03,2022,11,3,22,Female,Red light violation,TC8998
+2022-04-04,2022,7,6,35,Female,Speeding - 11-20 mph over limit,TC4331
+2022-11-06,2022,11,1,54,Male,Mobile phone violation,TC9131
+2022-12-04,2022,12,1,46,Female,Red light violation,TC4064
+2022-02-07,2022,9,2,33,Female,Mobile phone violation,TC5133
+2022-02-13,2022,9,3,30,Male,Speeding - 1-10 mph over limit,TC8712
+2022-01-04,2022,5,6,60,Male,Following too closely,TC5248
+2022-01-28,2022,8,3,22,Female,Speeding - 1-10 mph over limit,TC9223
+2022-05-09,2022,3,6,36,Female,Red light violation,TC6944
+2022-03-08,2022,6,7,34,Female,Following too closely,TC4813
+2022-10-05,2022,8,4,28,Male,Equipment violation,TC4755
+2022-05-27,2022,10,5,29,Female,Equipment violation,TC2887
+2022-06-12,2022,4,4,28,Female,Equipment violation,TC1892
+2022-02-04,2022,8,3,49,Female,Following too closely,TC1204
+2022-12-13,2022,8,6,23,Male,Speeding - 11-20 mph over limit,TC3259
+2022-05-22,2022,10,7,37,Male,Mobile phone violation,TC5247
+2022-07-23,2022,9,5,24,Male,Seat belt violation,TC3654
+2022-11-06,2022,4,6,33,Female,Equipment violation,TC3706
+2022-03-19,2022,10,4,53,Male,Speeding - 11-20 mph over limit,TC4919
+2022-12-30,2022,7,4,45,Female,Seat belt violation,TC4806
+2022-07-15,2022,4,3,48,Male,Following too closely,TC4204
+2022-08-20,2022,11,1,35,Male,Speeding - 1-10 mph over limit,TC7008
+2022-11-02,2022,4,6,48,Female,Stop sign violation,TC9874
+2022-08-13,2022,6,3,34,Female,Mobile phone violation,TC2112
+2022-08-19,2022,9,7,33,Female,Mobile phone violation,TC4361
+2022-03-30,2022,10,4,65,Female,Equipment violation,TC4470
+2022-11-12,2022,6,2,29,Male,Unsafe lane change,TC5910
+2022-08-27,2022,9,6,63,Female,Following too closely,TC4788
+2022-11-05,2022,7,4,52,Male,Following too closely,TC8062
+2022-08-10,2022,1,4,43,Female,Unsafe lane change,TC5026
+2022-12-26,2022,11,5,53,Female,Equipment violation,TC2702
+2022-03-23,2022,2,5,63,Female,Seat belt violation,TC9352
+2022-02-04,2022,3,7,44,Male,Unsafe lane change,TC9318
+2022-07-24,2022,12,7,34,Male,Unsafe lane change,TC6261
+2022-03-04,2022,5,7,46,Female,Red light violation,TC4439
+2022-04-24,2022,6,6,23,Female,Equipment violation,TC2145
+2022-01-01,2022,11,5,18,Female,Speeding - 11-20 mph over limit,TC3954
+2022-06-02,2022,5,4,30,Female,Equipment violation,TC5187
+2022-12-17,2022,12,7,56,Female,Equipment violation,TC9159
+2022-06-12,2022,6,1,40,Female,Speeding - 11-20 mph over limit,TC2627
+2022-05-24,2022,10,2,35,Male,Equipment violation,TC3216
+2022-09-14,2022,1,3,44,Male,Unsafe lane change,TC7691
+2022-05-24,2022,6,1,46,Male,Unsafe lane change,TC8026
+2022-05-25,2022,8,6,58,Female,Unsafe lane change,TC1032
+2022-01-20,2022,1,5,38,Female,Speeding - 11-20 mph over limit,TC8699
+2022-05-05,2022,3,2,44,Female,Speeding - 1-10 mph over limit,TC8540
+2022-09-19,2022,5,7,28,Male,Speeding - 11-20 mph over limit,TC8616
+2022-12-16,2022,9,5,39,Female,Following too closely,TC3154
+2022-03-13,2022,3,5,25,Female,Following too closely,TC5731
+2022-04-30,2022,12,1,57,Male,Red light violation,TC1858
+2022-07-26,2022,5,5,24,Female,Equipment violation,TC4500
+2022-12-25,2022,11,1,46,Female,Speeding - 1-10 mph over limit,TC4197
+2022-02-16,2022,5,2,37,Female,Unsafe lane change,TC6077
+2022-07-24,2022,11,4,28,Male,Mobile phone violation,TC3610
+2022-07-16,2022,3,3,57,Male,Red light violation,TC8854
+2022-10-02,2022,10,4,32,Male,Following too closely,TC6631
+2022-02-12,2022,11,5,63,Female,Seat belt violation,TC9823
+2022-09-25,2022,4,2,61,Female,Following too closely,TC8307
+2022-09-20,2022,11,2,22,Male,Mobile phone violation,TC8787
+2022-03-31,2022,4,3,45,Male,Seat belt violation,TC3633
+2022-05-21,2022,9,5,61,Male,Speeding - 1-10 mph over limit,TC8181
+2022-06-06,2022,6,6,63,Male,Equipment violation,TC2652
+2022-12-01,2022,4,7,23,Female,Equipment violation,TC1850
+2022-05-16,2022,10,1,20,Female,Seat belt violation,TC4392
+2022-02-28,2022,9,3,37,Female,Following too closely,TC4988
+2022-10-31,2022,11,1,21,Male,Seat belt violation,TC6841
+2022-07-08,2022,4,6,37,Female,Seat belt violation,TC7893
+2022-02-13,2022,7,1,32,Male,Speeding - 11-20 mph over limit,TC8065
+2022-09-20,2022,1,3,43,Male,Speeding - 1-10 mph over limit,TC7968
+2022-01-29,2022,12,4,38,Male,Red light violation,TC8382
+2022-11-23,2022,8,1,23,Female,Unsafe lane change,TC1469
+2022-07-18,2022,2,5,50,Male,Seat belt violation,TC6794
+2022-04-04,2022,8,3,43,Female,Following too closely,TC7838
+2022-12-23,2022,1,5,37,Male,Seat belt violation,TC7295
+2022-05-11,2022,4,5,37,Male,Unsafe lane change,TC2606
+2022-10-21,2022,1,6,27,Female,Seat belt violation,TC5671
+2022-05-09,2022,10,2,43,Male,Following too closely,TC5792
+2022-10-22,2022,12,2,23,Male,Speeding - 11-20 mph over limit,TC1545
+2022-09-13,2022,11,6,42,Female,Equipment violation,TC6377
+2022-03-29,2022,5,4,31,Female,Stop sign violation,TC8203
+2022-11-18,2022,1,5,28,Male,Unsafe lane change,TC5379
+2022-08-20,2022,2,1,34,Female,Speeding - 11-20 mph over limit,TC4745
+2022-06-16,2022,2,2,18,Female,Following too closely,TC4800
+2022-01-24,2022,11,1,26,Female,Speeding - 11-20 mph over limit,TC2735
+2022-02-04,2022,6,7,42,Male,Seat belt violation,TC7859
+2022-05-24,2022,8,7,60,Male,Red light violation,TC7025
+2022-09-22,2022,10,4,35,Male,Speeding - 1-10 mph over limit,TC5466
+2022-09-05,2022,6,6,18,Male,Equipment violation,TC6837
+2022-02-27,2022,5,3,18,Female,Speeding - 1-10 mph over limit,TC2858
+2022-08-24,2022,5,3,61,Female,Mobile phone violation,TC9256
+2022-11-21,2022,5,2,36,Female,Stop sign violation,TC1449
+2022-10-02,2022,6,6,58,Female,Unsafe lane change,TC9957
+2022-09-07,2022,11,5,19,Male,Seat belt violation,TC3113
+2022-09-10,2022,6,6,59,Male,Speeding - 11-20 mph over limit,TC3613
+2022-12-09,2022,7,4,43,Female,Unsafe lane change,TC9992
+2022-05-06,2022,8,5,48,Male,Stop sign violation,TC9341
+2022-08-21,2022,9,7,24,Female,Red light violation,TC1594
+2022-11-26,2022,6,4,36,Male,Speeding - 11-20 mph over limit,TC6847
+2022-05-06,2022,12,1,48,Male,Speeding - 1-10 mph over limit,TC6904
+2022-12-12,2022,5,5,64,Male,Equipment violation,TC3946
+2022-01-16,2022,9,1,51,Female,Equipment violation,TC2096
+2022-01-28,2022,4,4,34,Male,Red light violation,TC6980
+2022-06-19,2022,8,3,63,Male,Seat belt violation,TC8725
+2022-04-23,2022,2,1,55,Female,Speeding - 11-20 mph over limit,TC1854
+2022-08-08,2022,8,5,21,Female,Red light violation,TC8911
+2022-06-20,2022,11,3,26,Female,Equipment violation,TC8803
+2022-03-02,2022,9,2,49,Female,Equipment violation,TC8217
+2022-08-22,2022,11,2,50,Female,Mobile phone violation,TC2446
+2022-04-06,2022,4,3,48,Male,Seat belt violation,TC2178
+2022-11-02,2022,2,7,19,Female,Mobile phone violation,TC8144
+2022-01-03,2022,1,5,50,Female,Unsafe lane change,TC1321
+2022-08-21,2022,6,2,32,Female,Speeding - 1-10 mph over limit,TC1743
+2022-11-11,2022,3,4,27,Male,Stop sign violation,TC7075
+2022-12-26,2022,8,5,18,Female,Equipment violation,TC2745
+2022-02-28,2022,4,5,29,Male,Following too closely,TC8473
+2022-01-21,2022,6,6,39,Male,Seat belt violation,TC8392
+2022-12-25,2022,4,4,43,Female,Mobile phone violation,TC4755
+2022-09-28,2022,1,6,42,Female,Following too closely,TC6205
+2022-02-04,2022,8,2,40,Male,Speeding - 11-20 mph over limit,TC8612
+2022-04-30,2022,12,3,20,Female,Unsafe lane change,TC5408
+2022-11-28,2022,8,1,42,Male,Speeding - 11-20 mph over limit,TC2324
+2022-01-25,2022,12,2,44,Male,Equipment violation,TC4410
+2022-03-13,2022,10,5,25,Male,Stop sign violation,TC4858
+2022-10-03,2022,6,7,36,Female,Speeding - 11-20 mph over limit,TC1781
+2022-07-29,2022,10,4,35,Male,Stop sign violation,TC2729
+2022-11-07,2022,11,4,23,Male,Following too closely,TC7502
+2022-10-24,2022,7,4,32,Female,Stop sign violation,TC7945
+2022-08-09,2022,3,5,44,Male,Equipment violation,TC2315
+2022-03-29,2022,2,5,24,Female,Speeding - 1-10 mph over limit,TC9589
+2022-12-26,2022,7,7,49,Male,Stop sign violation,TC8272
+2022-11-19,2022,3,3,24,Female,Speeding - 11-20 mph over limit,TC2192
+2022-09-30,2022,12,1,39,Male,Speeding - 11-20 mph over limit,TC1785
+2022-04-09,2022,8,3,48,Female,Red light violation,TC3016
+2022-03-21,2022,1,4,18,Female,Unsafe lane change,TC3890
+2022-06-17,2022,1,4,22,Female,Red light violation,TC9049
+2022-11-25,2022,4,6,20,Male,Following too closely,TC9550
+2022-11-08,2022,1,6,42,Male,Red light violation,TC8117
+2022-12-18,2022,7,1,41,Male,Speeding - 1-10 mph over limit,TC5818
+2022-04-15,2022,8,2,61,Male,Speeding - 11-20 mph over limit,TC1922
+2022-12-30,2022,4,7,24,Male,Following too closely,TC8284
+2022-12-08,2022,10,3,59,Female,Equipment violation,TC1659
+2022-07-04,2022,1,3,29,Female,Speeding - 11-20 mph over limit,TC2882
+2022-01-24,2022,10,6,33,Male,Stop sign violation,TC2955
+2022-02-20,2022,9,3,27,Female,Following too closely,TC1329
+2022-07-22,2022,12,6,65,Male,Stop sign violation,TC5389
+2022-10-28,2022,5,5,53,Female,Mobile phone violation,TC8927
+2022-04-08,2022,6,1,26,Male,Mobile phone violation,TC9515
+2022-11-05,2022,2,2,31,Female,Following too closely,TC3437
+2022-08-16,2022,11,2,57,Male,Equipment violation,TC5417
+2022-05-30,2022,7,3,39,Male,Unsafe lane change,TC3305
+2022-07-19,2022,6,5,54,Female,Speeding - 1-10 mph over limit,TC6966
+2022-06-06,2022,9,3,40,Male,Stop sign violation,TC6209
+2022-04-14,2022,10,5,52,Female,Unsafe lane change,TC8796
+2022-11-26,2022,6,7,18,Male,Equipment violation,TC5710
+2022-04-20,2022,5,6,40,Male,Equipment violation,TC8426
+2022-08-25,2022,6,2,23,Male,Red light violation,TC7478
+2022-02-03,2022,3,6,52,Female,Speeding - 11-20 mph over limit,TC7300
+2022-02-16,2022,7,2,41,Male,Unsafe lane change,TC3117
+2022-02-01,2022,12,5,22,Female,Speeding - 11-20 mph over limit,TC4623
+2022-03-10,2022,2,6,26,Female,Unsafe lane change,TC6235
+2022-07-20,2022,2,1,39,Male,Unsafe lane change,TC5192
+2022-06-22,2022,10,3,38,Female,Following too closely,TC3163
+2022-09-01,2022,1,5,39,Female,Following too closely,TC4363
+2022-12-05,2022,11,7,40,Male,Speeding - 11-20 mph over limit,TC5977
+2022-02-27,2022,2,1,49,Female,Red light violation,TC7166
+2022-05-14,2022,4,2,44,Male,Speeding - 11-20 mph over limit,TC9499
+2022-07-24,2022,4,1,21,Male,Mobile phone violation,TC7803
+2022-02-04,2022,7,6,45,Male,Speeding - 11-20 mph over limit,TC2063
+2022-07-31,2022,2,5,51,Female,Speeding - 11-20 mph over limit,TC9815
+2022-03-05,2022,5,1,30,Female,Equipment violation,TC7965
+2022-06-18,2022,12,1,47,Male,Speeding - 11-20 mph over limit,TC2793
+2022-10-24,2022,10,3,60,Male,Red light violation,TC9482
+2022-09-29,2022,2,1,34,Female,Red light violation,TC7041
+2022-03-14,2022,8,6,24,Female,Speeding - 1-10 mph over limit,TC7405
+2022-01-25,2022,1,3,30,Male,Red light violation,TC7621
+2022-01-18,2022,7,6,55,Male,Speeding - 1-10 mph over limit,TC4350
+2022-01-05,2022,12,2,45,Male,Equipment violation,TC5867
+2022-12-22,2022,5,6,54,Female,Speeding - 1-10 mph over limit,TC4888
+2022-09-07,2022,6,1,41,Male,Equipment violation,TC7012
+2022-12-25,2022,11,2,26,Female,Following too closely,TC1758
+2022-12-31,2022,5,4,40,Male,Equipment violation,TC7607
+2022-05-30,2022,10,5,34,Male,Equipment violation,TC9356
+2022-10-09,2022,10,4,39,Female,Following too closely,TC3919
+2022-04-28,2022,10,1,48,Male,Following too closely,TC6377
+2022-03-30,2022,2,3,29,Female,Speeding - 11-20 mph over limit,TC5955
+2022-01-08,2022,1,6,37,Male,Stop sign violation,TC7335
+2022-05-10,2022,4,7,59,Male,Equipment violation,TC1489
+2022-03-16,2022,11,5,27,Female,Stop sign violation,TC6350
+2022-11-09,2022,2,3,48,Female,Equipment violation,TC4377
+2022-05-24,2022,10,6,24,Male,Seat belt violation,TC5227
+2022-09-11,2022,4,4,44,Female,Unsafe lane change,TC1891
+2022-05-30,2022,10,3,60,Male,Speeding - 11-20 mph over limit,TC1638
+2022-10-01,2022,8,6,25,Female,Equipment violation,TC6119
+2022-07-06,2022,8,2,24,Female,Following too closely,TC3139
+2022-10-02,2022,7,6,54,Male,Red light violation,TC3933
+2022-05-01,2022,7,6,23,Female,Unsafe lane change,TC1901
+2022-12-01,2022,10,2,47,Female,Red light violation,TC5367
+2022-04-09,2022,5,6,23,Male,Unsafe lane change,TC1186
+2022-04-27,2022,11,6,39,Male,Speeding - 1-10 mph over limit,TC9930
+2022-11-23,2022,3,1,57,Male,Mobile phone violation,TC9178
+2022-02-10,2022,12,4,44,Female,Mobile phone violation,TC8785
+2022-11-04,2022,7,4,27,Male,Seat belt violation,TC4635
+2022-03-01,2022,10,1,46,Male,Equipment violation,TC5142
+2022-06-15,2022,2,2,42,Female,Mobile phone violation,TC7577
+2022-07-16,2022,9,7,55,Male,Unsafe lane change,TC2169
+2022-10-12,2022,11,1,54,Female,Following too closely,TC1982
+2022-08-20,2022,3,5,55,Male,Stop sign violation,TC6414
+2022-01-13,2022,8,7,62,Female,Speeding - 1-10 mph over limit,TC8794
+2022-06-23,2022,9,7,41,Male,Red light violation,TC7489
+2022-11-08,2022,10,4,23,Female,Speeding - 1-10 mph over limit,TC7416
+2022-10-22,2022,3,4,54,Male,Stop sign violation,TC2409
+2022-09-26,2022,11,5,45,Female,Mobile phone violation,TC7075
+2022-11-18,2022,12,2,41,Female,Speeding - 1-10 mph over limit,TC3331
+2022-10-20,2022,8,2,29,Male,Stop sign violation,TC8103
+2022-12-29,2022,11,7,50,Male,Mobile phone violation,TC8188
+2022-05-11,2022,6,2,28,Female,Red light violation,TC6158
+2022-09-13,2022,4,7,51,Male,Mobile phone violation,TC9147

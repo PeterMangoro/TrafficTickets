@@ -31,7 +31,12 @@ def load_data():
 	if df_2023 is None:
 		df_2023 = read_csv_if_exists("sample_traffic_tickets_2023.csv")
 		if df_2023 is not None:
-			st.info("🚀 **Demo Mode**: Using sample dataset for demonstration. Upload full datasets for complete analysis.")
+			st.info("🚀 **Demo Mode**: Using sample 2023 dataset for demonstration. Upload full datasets for complete analysis.")
+	
+	if df_2022 is None:
+		df_2022 = read_csv_if_exists("sample_traffic_tickets_2022.csv")
+		if df_2022 is not None:
+			st.info("🔍 **Demo Mode**: Using sample 2022 dataset for year-over-year comparison.")
 	
 	if weather is None:
 		weather = read_csv_if_exists("sample_weather_dataset.csv")
