@@ -310,9 +310,9 @@ if counts_2023 is not None and not counts_2023.empty:
 			plot_bgcolor="rgba(0,0,0,0)",  # Transparent plot background
 			paper_bgcolor="rgba(0,0,0,0)",  # Transparent overall background
 			legend=dict(
-				bgcolor="rgba(27,31,42,0.9)",  # Dark background matching sidebar
-				bordercolor="rgba(255,255,255,0.2)",  # Subtle border
-				font=dict(color="#ffffff")  # White text in legend
+				bgcolor="rgba(0,0,0,0)",  # Completely transparent background
+				bordercolor="rgba(0,0,0,0)",  # No border
+				font=dict(color="#ffffff")  # White text for visibility
 			),
 			xaxis=dict(color="#ffffff"),  # White axis text
 			yaxis=dict(color="#ffffff")   # White axis text
@@ -343,9 +343,9 @@ if violation_col is not None and pd.notna(violation_col).any() and month_col and
 		plot_bgcolor="rgba(0,0,0,0)",
 		paper_bgcolor="rgba(0,0,0,0)",
 		legend=dict(
-			bgcolor="rgba(27,31,42,0.9)",
-			bordercolor="rgba(255,255,255,0.2)",
-			font=dict(color="#ffffff")
+			bgcolor="rgba(0,0,0,0)",  # Completely transparent background
+			bordercolor="rgba(0,0,0,0)",  # No border
+			font=dict(color="#ffffff")  # White text for visibility
 		),
 		xaxis=dict(color="#ffffff"),
 		yaxis=dict(color="#ffffff")
@@ -427,9 +427,9 @@ if pd.notna(tickets.get("age_group")).any() and pd.notna(tickets.get("gender")).
 		plot_bgcolor="rgba(0,0,0,0)",
 		paper_bgcolor="rgba(0,0,0,0)",
 		legend=dict(
-			bgcolor="rgba(27,31,42,0.9)",
-			bordercolor="rgba(255,255,255,0.2)",
-			font=dict(color="#ffffff")
+			bgcolor="rgba(0,0,0,0)",  # Completely transparent background
+			bordercolor="rgba(0,0,0,0)",  # No border
+			font=dict(color="#ffffff")  # White text for visibility
 		),
 		xaxis=dict(color="#ffffff"),
 		yaxis=dict(color="#ffffff")
