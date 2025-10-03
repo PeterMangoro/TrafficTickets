@@ -5,9 +5,10 @@
 ## 📊 Data Access & Deployment
 
 ### Demo Data Included
-The repository includes sample datasets for testing and demonstration:
-- `sample_traffic_tickets_2023.csv`: 500 sample records
-- `sample_weather_dataset.csv`: 50 sample weather records
+The repository includes comprehensive sample datasets for testing and demonstration:
+- `sample_traffic_tickets_2022.csv`: 300 sample records for 2022
+- `sample_traffic_tickets_2023.csv`: 500 sample records for 2023  
+- `sample_weather_dataset.csv`: 80 sample weather records across both years
 
 ### Production Data
 Full datasets are **not included** in this repository due to size constraints (~280MB files).
